@@ -1,0 +1,98 @@
+.loading {
+    background-color: #00f;
+    width: 100vw;
+    height:100%;
+    position: absolute;
+    opacity: 1;
+    z-index: 99999999;
+    display: block;
+
+}
+
+.fade {
+    animation: hide 2s linear 0s 1 normal forwards running;
+
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        z-index: 99999999;
+        display: block;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+        display: none;
+        z-index: -3;
+    }
+}
+
+.boxes {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+}
+
+.boxes .c {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #f1f1f1;
+    border-right: 5px solid #f1f1f1;
+    width: 100%;
+    height: 100%;
+    animation: ani 1.5s linear 0s infinite normal none running;
+}
+
+.boxes .c1 {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0.2s;
+}
+
+.boxes .c2 {
+    width: 80%;
+    height: 80%;
+    animation-delay: 0.4s;
+}
+
+.boxes .c3 {
+    width: 60%;
+    height: 60%;
+    animation-delay: 0.5s;
+}
+
+.boxes .c4 {
+    width: 40%;
+    height: 40%;
+    animation-delay: 0.3s;
+}
+
+.boxes .c5 {
+    width: 20%;
+    height: 20%;
+    animation-delay: 0.7s;
+}
+
+@keyframes ani {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}

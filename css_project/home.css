@@ -1,0 +1,3827 @@
+
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: tahoma;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* navbar */
+
+.nav {
+    width: 100vw;
+    height: 10vh;
+    background-color: #2E3942;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 1fr;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav div.img {
+    width: 100%;
+    height: 100%;
+    background-image: url('../image/logo/1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.nav div.img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav div.search {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav div.search form {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav div.search input {
+    position: relative;
+    width: 85%;
+    height: 5vh;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    padding: 2vh 3vh;
+    border-radius: 5vh 0 0 5vh;
+    box-sizing: border-box;
+    transition: all 0.5s linear 0s;
+    background-color: #f1f1f1;
+    color: #0094C9;
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.5);
+    font-size: 3vh;
+}
+
+.nav div.search input::-webkit-input-placeholder {
+    color: #0094C9;
+    box-sizing: border-box;
+    font-family: tahoma;
+}
+
+.nav div.search input:focus {
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+.nav div.search button {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 10%;
+    height: 5vh;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    border-radius: 0 5vh 5vh 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #0094C9;
+    color: #f1f1f1;
+    transition: all 0.5s linear 0s;
+    font-size: 3vh;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.nav div.search button:hover {
+    background-color: #f1f1f1;
+    color: #0094C9;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+.nav div.search button i {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.nav .signup,
+.nav .login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .signup a,
+.nav .login a {
+    text-decoration: none;
+    color: #f1f1f1;
+    background-color: #0094C9;
+    display: block;
+    height: 5vh;
+    width: 50%;
+    font-size: 1.9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.7vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+}
+
+.nav .signup a:hover,
+.nav .login a:hover {
+    color: #0094C9;
+    background-color: #f1f1f1;
+}
+
+/***************************************************************/
+
+@media (max-width:780px) {
+    .nav {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        height: 50vh;
+    }
+    .nav div.img {
+        width: 100%;
+        height: 100%;
+        background-image: url('../image/logo/1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .nav div.img,
+    .nav div.search,
+    .nav div.signup,
+    .nav div.login {
+        grid-column: 1/2;
+        width: 100vw;
+        font-size: 3vh;
+    }
+
+    .nav div.img {
+        width: 100%;
+        height: 100%;
+        background-image: url('../image/logo/1.png');
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: center;
+        padding: 5vh;
+        margin-top: 5vh;
+        box-sizing: border-box;
+    }
+
+
+}
+
+/***************************************************************/
+
+/* End navbar */
+
+/* slider */
+
+.slider {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.slider .container {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.slider .container .box {
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+    text-align: center;
+    line-height: calc( 100vh - 10vh);
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s linear 0s;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
+.slider .container .box:nth-child(1) {
+    background-image: url(../image/slider/1.png);
+}
+
+.slider .container .box:nth-child(2) {
+    background-image: url(../image/slider/2.png);
+}
+
+.slider .container .box:nth-child(3) {
+    background-image: url(../image/slider/3.png);
+}
+
+.slider .container .box:nth-child(4) {
+    background-image: url(../image/slider/4.png);
+}
+
+.slider .container .box:nth-child(5) {
+    background-image: url(../image/slider/5.png);
+}
+
+.slider .container .box a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 1s linear 0s;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.slider .container .box a span {
+    color: #f1f1f1;
+    text-transform: uppercase;
+    padding: 2% 5%;
+    font-size: 2vh;
+    transition: all 0.5s linear 0s;
+    border-radius: 0.7vh;
+    box-sizing: border-box;
+}
+
+.slider .container .box:hover a {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.slider .container .box:hover a span {
+    color: #f1f1f1;
+    background-color: #0094C9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider .container .box:hover a span:hover {
+    color: #0094C9;
+    background-color: #f1f1f1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider .container .box:hover {
+    width: 100vw;
+}
+
+/*********************************/
+
+@media (max-width:770px) {
+    .slider {
+        height: ( 100vh - 50vh);
+    }
+    .slider .container .box {
+        height: ( 100vh - 50vh);
+        line-height: calc( 100vh - 50vh);
+    }
+}
+
+/*********************************/
+
+/* End slider*/
+
+/* info */
+
+.info {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 3vh 5vh;
+    box-sizing: border-box;
+
+    background-image: url(../image/div/2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-template-columns: 1f 3f;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.info * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.info .words {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+
+.info .words h1,
+.info .words p {
+    color: #f1f1f1;
+    box-sizing: border-box;
+    padding: 2vh;
+}
+
+.info .words h1 {
+    font-size: 7vh;
+}
+
+.info .words p {
+    font-size: 3vh;
+}
+
+.info .categories {
+    grid-column: 2/3;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1f 1f 1f;
+    grid-gap: 2vh;
+}
+
+.info .categories div {
+    background-color: transparent;
+    padding: 1vh;
+    box-sizing: border-box;
+    position: relative;
+    width: 10vw;
+    height: 15vh;
+    cursor: pointer;
+}
+
+.info .categories div div.card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+
+}
+
+.info .categories div:hover div.card {
+    transform: rotateY(180deg);
+}
+
+.info .categories div div.card div.front,
+.info .categories div div.card div.back {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.info .categories div div.card div.front {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #f1f1f1;
+    color: #2E3942;
+
+}
+
+.info .categories div div.card div.front h3 {
+    font-size: 2vh;
+}
+
+.info .categories div div.card div.front i {
+    font-size: 4vh;
+}
+
+.info .categories div div.card div.back {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ff0;
+    font-size: 3vh;
+}
+
+.info .categories div div.card div.back a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #f1f1f1;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 2.5vh;
+}
+
+.info .categories div:nth-child(1) div.card div.back {
+    background-color: #0093C9;
+}
+
+.info .categories div:nth-child(2) div.card div.back {
+    background-color: #10A650;
+}
+
+.info .categories div:nth-child(3) div.card div.back {
+    background-color: #2D3942;
+}
+
+.info .categories div:nth-child(4) div.card div.back {
+    background-color: #E42330;
+}
+
+.info .categories div:nth-child(5) div.card div.back {
+    background-color: #BFD131;
+}
+
+.info .categories div:nth-child(6) div.card div.back {
+    background-color: #F49B29;
+}
+
+.info .categories div:nth-child(7) div.card div.back {
+    background-color: #833A8D;
+}
+
+.info .categories div:nth-child(8) div.card div.back {
+    background-color: #C81A7F;
+}
+
+.info .categories div:nth-child(9) div.card div.back {
+    background-color: #2A0040;
+}
+
+.info .categories div:nth-child(1) div.card div.front i {
+    color: #0093C9;
+}
+
+.info .categories div:nth-child(2) div.card div.front i {
+    color: #10A650;
+}
+
+.info .categories div:nth-child(3) div.card div.front i {
+    color: #2D3942;
+}
+
+.info .categories div:nth-child(4) div.card div.front i {
+    color: #E42330;
+}
+
+.info .categories div:nth-child(5) div.card div.front i {
+    color: #BFD131;
+}
+
+.info .categories div:nth-child(6) div.card div.front i {
+    color: #F49B29;
+}
+
+.info .categories div:nth-child(7) div.card div.front i {
+    color: #833A8D;
+}
+
+.info .categories div:nth-child(8) div.card div.front i {
+    color: #C81A7F;
+}
+
+.info .categories div:nth-child(9) div.card div.front i {
+    color: #2A0040;
+}
+
+
+
+
+.info .categories div:nth-child(1),
+.info .categories div:nth-child(4),
+.info .categories div:nth-child(7) {
+    grid-column: 1/2;
+}
+
+.info .categories div:nth-child(2),
+.info .categories div:nth-child(5),
+.info .categories div:nth-child(8) {
+    grid-column: 2/3;
+}
+
+.info .categories div:nth-child(3),
+.info .categories div:nth-child(6),
+.info .categories div:nth-child(9) {
+    grid-column: 3/4;
+}
+
+/**************************************************/
+
+@media (max-width:841px) {
+    .info {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        width: 100vw;
+        height: 220vh;
+        margin: 0;
+        padding: 3vh 5vh;
+        box-sizing: border-box;
+    }
+    .info .words,
+    .info .categories {
+        grid-column: 1/2;
+    }
+    .info .categories div {
+        width: 18vh;
+        height: 30vh;
+
+    }
+    .info .categories div div.card div.front,
+    .info .categories div div.card div.back {}
+}
+
+@media (max-width:470px) {
+
+    .info .categories {
+        grid-column: 1/2;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1f;
+        grid-gap: 1vh;
+
+    }
+
+    .info .words h1 {
+        font-size: 7vh;
+    }
+    .info .words p {
+        font-size: 3vh;
+    }
+    .info .words,
+    .info .categories {
+        grid-column: 1/2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info .categories div {
+        width: 40vw;
+        height: 40vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .info {
+        height: 550vh;
+
+    }
+    .info .categories div:nth-child(1),
+    .info .categories div:nth-child(4),
+    .info .categories div:nth-child(7),
+    .info .categories div:nth-child(2),
+    .info .categories div:nth-child(5),
+    .info .categories div:nth-child(8),
+    .info .categories div:nth-child(3),
+    .info .categories div:nth-child(6),
+    .info .categories div:nth-child(9) {
+        grid-column: 1/2;
+    }
+    .info .categories div div.card div.front {
+        font-size: 2vh;
+    }
+    .info .categories div div.card div.front h3 {
+        font-size: 2.5vh;
+    }
+    .info .categories div div.card div.front i {
+        font-size: 7vh;
+    }
+    .info .categories div div.card div.back a {
+        box-sizing: border-box;
+        padding: 2vh;
+        font-size: 3vh;
+    }
+}
+
+/***************************************************/
+
+/* End info*/
+
+/***********************************************************************/
+
+/*Technology*/
+
+.Technology {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #0093C9;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.Technology::before {
+    content: '\f109';
+    font-family:  "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #0093C9;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.Technology:hover::before {
+    transform: translateX(-50%) rotateZ(360deg);
+}
+
+.Technology * {
+    padding: 0;
+    margin: 0;
+}
+
+.Technology p {
+    color: #2E3942;
+}
+
+.Technology p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #ff0;
+    text-shadow: 0px 0px 2vh #1eff4e, 0px 0px 4vh #1eff4e, 0px 0px 8vh #1eff4e, 0px 0px 12vh #1eff4e;
+}
+
+.Technology p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.Technology p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.Technology p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+ 
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.Technology p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.Technology div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.Technology div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.Technology div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.Technology div.cate {
+    margin-top: 10vh;
+}
+
+.Technology div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.Technology div div.container div.card2 div.front2,
+.Technology div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.Technology div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/technology/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.Technology div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/technology/2.jpg)
+}
+
+.Technology div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/technology/3.jpg)
+}
+
+.Technology div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/technology/4.jpg)
+}
+
+.Technology div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/technology/5.jpg)
+}
+
+.Technology div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.Technology div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.Technology div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.Technology div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.Technology div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.Technology div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #0093C9;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.Technology div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.Technology div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.Technology div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.Technology div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.Technology div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.Technology a.more {
+    display: block;
+    text-decoration: none;
+    color: #0093C9;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.Technology a.more:hover {
+    border-radius: 1vh;
+    background-color: #0093C9;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .Technology div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .Technology div div.container:nth-child(1),
+    .Technology div div.container:nth-child(2),
+    .Technology div div.container:nth-child(3),
+    .Technology div div.container:nth-child(4),
+    .Technology div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .Technology div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .Technology a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .Technology div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .Technology div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .Technology p,
+    .Technology p span {
+        font-size: 5vh;
+    }
+    .Technology a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .Technology div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/* End Technology */
+
+/*************************************************************************************************************/
+
+/*language*/
+
+.language {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #10A650;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.language::before {
+    content: '\f1ab';
+    font-family:  "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateY(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #10A650;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.language:hover::before {
+    transform: translateX(-50%) rotateY(360deg);
+}
+
+.language * {
+    padding: 0;
+    margin: 0;
+}
+
+.language p {
+    color: #2E3942;
+}
+
+.language p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #ff80ff;
+    text-shadow: 0px 0px 2vh #0093C9, 0px 0px 4vh #0093C9, 0px 0px 8vh #0093C9, 0px 0px 12vh #0093C9;
+}
+
+.language p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.language p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.language p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.language p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.language div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.language div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.language div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.language div.cate {
+    margin-top: 10vh;
+}
+
+.language div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.language div div.container div.card2 div.front2,
+.language div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.language div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/language/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.language div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/language/2.jpg)
+}
+
+.language div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/language/3.jpg)
+}
+
+.language div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/language/4.jpg)
+}
+
+.language div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/language/5.jpg)
+}
+
+.language div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.language div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.language div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.language div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.language div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.language div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #10A650;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.language div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.language div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.language div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.language div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.language div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.language a.more {
+    display: block;
+    text-decoration: none;
+    color: #10A650;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.language a.more:hover {
+    border-radius: 1vh;
+    background-color: #10A650;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .language div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .language div div.container:nth-child(1),
+    .language div div.container:nth-child(2),
+    .language div div.container:nth-child(3),
+    .language div div.container:nth-child(4),
+    .language div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .language div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .language a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .language div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .language div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .language p,
+    .language p span {
+        font-size: 5vh;
+    }
+    .language a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .language div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/*End language*/
+
+/********************************************************************************************/
+
+/*science*/
+
+.science {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #2D3942;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.science::before {
+    content: '\f0c3';
+    font-family: "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateX(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #2D3942;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.science:hover::before {
+    transform: translateX(-50%) rotateX(360deg);
+}
+
+.science * {
+    padding: 0;
+    margin: 0;
+}
+
+.science p {
+    color: #ddd;
+}
+
+.science p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #1fA750;
+    text-shadow: 0px 0px 2vh #10A650, 0px 0px 4vh #10A650, 0px 0px 8vh #10A650, 0px 0px 12vh #10A650;
+}
+
+.science p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.science p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.science p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.science p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.science div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.science div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.science div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.science div.cate {
+    margin-top: 10vh;
+}
+
+.science div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.science div div.container div.card2 div.front2,
+.science div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.science div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/science/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.science div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/science/2.jpg)
+}
+
+.science div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/science/3.jpg)
+}
+
+.science div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/science/4.jpg)
+}
+
+.science div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/science/5.jpg)
+}
+
+.science div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.science div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.science div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.science div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.science div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.science div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #2D3942;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.science div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.science div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.science div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.science div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.science div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.science a.more {
+    display: block;
+    text-decoration: none;
+    color: #2D3942;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.science a.more:hover {
+    border-radius: 1vh;
+    background-color: #2D3942;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .science div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .science div div.container:nth-child(1),
+    .science div div.container:nth-child(2),
+    .science div div.container:nth-child(3),
+    .science div div.container:nth-child(4),
+    .science div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .science div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .science a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .science div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .science div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .science p,
+    .science p span {
+        font-size: 5vh;
+    }
+    .science a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .science div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/* End science */
+
+/*******************************************************************************************/
+
+/* health */
+
+.health {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #E42330;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.health::before {
+    content: '\f21e';
+    font-family: "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #E42330;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+    animation: plusing 0.5s linear 0s infinite alternate none paused;
+}
+
+@keyframes plusing {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1.3);
+    }
+}
+
+.health:hover::before {
+    animation: plusing 0.5s linear 0s infinite alternate none running;
+}
+
+.health * {
+    padding: 0;
+    margin: 0;
+}
+
+.health p {
+    color: #2D3942;
+}
+
+.health p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+}
+
+.health p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.health p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.health p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.health p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.health div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.health div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.health div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.health div.cate {
+    margin-top: 10vh;
+}
+
+.health div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.health div div.container div.card2 div.front2,
+.health div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.health div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/health/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.health div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/health/2.jpg)
+}
+
+.health div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/health/3.jpg)
+}
+
+.health div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/health/4.jpg)
+}
+
+.health div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/health/5.jpg)
+}
+
+.health div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.health div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.health div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.health div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.health div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.health div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #E42330;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.health div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.health div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.health div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.health div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.health div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.health a.more {
+    display: block;
+    text-decoration: none;
+    color: #E42330;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.health a.more:hover {
+    border-radius: 1vh;
+    background-color: #E42330;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .health div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .health div div.container:nth-child(1),
+    .health div div.container:nth-child(2),
+    .health div div.container:nth-child(3),
+    .health div div.container:nth-child(4),
+    .health div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .health div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .health a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .health div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .health div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .health p,
+    .health p span {
+        font-size: 5vh;
+    }
+    .health a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .health div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/*End health*/
+
+/***********************************************************************/
+
+/*humanities*/
+
+.humanities {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #BFD131;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.humanities::before {
+    content: '\f0c0';
+    font-family: "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateX(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #BFD131;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.humanities:hover::before {
+    transform: translateX(-50%) rotateX(360deg);
+}
+
+.humanities * {
+    padding: 0;
+    margin: 0;
+}
+
+.humanities p {
+    color: #2D3942;
+}
+
+.humanities p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+}
+
+.humanities p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.humanities p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.humanities p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.humanities p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.humanities div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.humanities div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.humanities div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.humanities div.cate {
+    margin-top: 10vh;
+}
+
+.humanities div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.humanities div div.container div.card2 div.front2,
+.humanities div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.humanities div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/humanities/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.humanities div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/humanities/2.jpg)
+}
+
+.humanities div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/humanities/3.jpg)
+}
+
+.humanities div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/humanities/4.jpg)
+}
+
+.humanities div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/humanities/5.jpg)
+}
+
+.humanities div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.humanities div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.humanities div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.humanities div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.humanities div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.humanities div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #BFD131;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.humanities div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.humanities div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.humanities div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.humanities div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.humanities div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.humanities a.more {
+    display: block;
+    text-decoration: none;
+    color: #BFD131;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.humanities a.more:hover {
+    border-radius: 1vh;
+    background-color: #BFD131;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .humanities div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .humanities div div.container:nth-child(1),
+    .humanities div div.container:nth-child(2),
+    .humanities div div.container:nth-child(3),
+    .humanities div div.container:nth-child(4),
+    .humanities div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .humanities div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .humanities a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .humanities div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .humanities div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .humanities p,
+    .humanities p span {
+        font-size: 5vh;
+    }
+    .humanities a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .humanities div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/*End humanities*/
+
+/************************************************************************************/
+
+/*business*/
+
+.business {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #F49B29;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.business::before {
+    content: '\f0b1';
+    font-family: "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #F49B29;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.business:hover::before {
+    transform: translateX(-50%) rotateZ(360deg);
+}
+
+.business * {
+    padding: 0;
+    margin: 0;
+}
+
+.business p {
+    color: #2D3942;
+}
+
+.business p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+}
+
+.business p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.business p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.business p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.business p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.business div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.business div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.business div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.business div.cate {
+    margin-top: 10vh;
+}
+
+.business div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.business div div.container div.card2 div.front2,
+.business div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.business div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/business/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.business div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/business/2.jpg)
+}
+
+.business div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/business/3.jpg)
+}
+
+.business div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/business/4.jpg)
+}
+
+.business div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/business/5.jpg)
+}
+
+.business div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.business div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.business div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.business div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.business div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.business div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #F49B29;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.business div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.business div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.business div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.business div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.business div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.business a.more {
+    display: block;
+    text-decoration: none;
+    color: #F49B29;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.business a.more:hover {
+    border-radius: 1vh;
+    background-color: #F49B29;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .business div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .business div div.container:nth-child(1),
+    .business div div.container:nth-child(2),
+    .business div div.container:nth-child(3),
+    .business div div.container:nth-child(4),
+    .business div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .business div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .business a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .business div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .business div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .business p,
+    .business p span {
+        font-size: 5vh;
+    }
+    .business a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .business div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/*End business */
+
+/**** #833A8D;***********************************************************/
+
+/*math*/
+
+.math {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #833A8D;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.math::before {
+    content: '\f1ec';
+    font-family: "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateY(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #833A8D;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.math:hover::before {
+    transform: translateX(-50%) rotateY(360deg);
+}
+
+.math * {
+    padding: 0;
+    margin: 0;
+}
+
+.math p {
+    color: #2D3942;
+}
+
+.math p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+}
+
+.math p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.math p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.math p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.math p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.math div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.math div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.math div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.math div.cate {
+    margin-top: 10vh;
+}
+
+.math div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.math div div.container div.card2 div.front2,
+.math div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.math div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/math/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.math div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/math/2.jpg)
+}
+
+.math div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/math/3.jpg)
+}
+
+.math div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/math/4.jpg)
+}
+
+.math div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/math/5.jpg)
+}
+
+.math div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.math div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.math div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.math div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.math div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.math div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #833A8D;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.math div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.math div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.math div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.math div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.math div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.math a.more {
+    display: block;
+    text-decoration: none;
+    color: #833A8D;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.math a.more:hover {
+    border-radius: 1vh;
+    background-color: #833A8D;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .math div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .math div div.container:nth-child(1),
+    .math div div.container:nth-child(2),
+    .math div div.container:nth-child(3),
+    .math div div.container:nth-child(4),
+    .math div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .math div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .math a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .math div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .math div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .math p,
+    .math p span {
+        font-size: 5vh;
+    }
+    .math a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .math div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+
+/***************************************************************/
+
+/*End math*/
+
+/*****************************************************************/
+
+/*marketing*/
+
+.marketing {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #C81A7F;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.marketing::before {
+    content: '\f07a';
+    font-family: "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateZ(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #C81A7F;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.marketing:hover::before {
+    transform: translateX(-50%) rotateZ(-360deg);
+}
+
+.marketing * {
+    padding: 0;
+    margin: 0;
+}
+
+.marketing p {
+    color: #2D3942;
+}
+
+.marketing p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+}
+
+.marketing p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.marketing p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.marketing p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.marketing p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.marketing div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.marketing div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.marketing div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.marketing div.cate {
+    margin-top: 10vh;
+}
+
+.marketing div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.marketing div div.container div.card2 div.front2,
+.marketing div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.marketing div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/marketing/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.marketing div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/marketing/2.jpg)
+}
+
+.marketing div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/marketing/5.jpeg)
+}
+
+.marketing div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/marketing/4.jpg)
+}
+
+.marketing div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/marketing/5.jpg)
+}
+
+.marketing div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.marketing div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.marketing div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.marketing div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.marketing div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.marketing div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #C81A7F;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.marketing div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.marketing div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.marketing div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.marketing div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.marketing div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.marketing a.more {
+    display: block;
+    text-decoration: none;
+    color: #C81A7F;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.marketing a.more:hover {
+    border-radius: 1vh;
+    background-color: #C81A7F;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .marketing div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .marketing div div.container:nth-child(1),
+    .marketing div div.container:nth-child(2),
+    .marketing div div.container:nth-child(3),
+    .marketing div div.container:nth-child(4),
+    .marketing div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .marketing div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .marketing a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .marketing div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .marketing div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .marketing p,
+    .marketing p span {
+        font-size: 5vh;
+    }
+    .marketing a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .marketing div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/* End marketing*/
+
+/******************************************************************************/
+
+/*lifestyle*/
+
+.lifestyle {
+    width: 100vw;
+    height: ( 100vh - 1vh);
+    margin: 0;
+    padding: 15vh 5vh;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #2A0040;
+
+    display: grid;
+    grid-template-columns: 1f;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 5vh;
+}
+
+.lifestyle::before {
+    content: '\f118';
+    font-family: "Font Awesome 5 Free Solid";
+    position: absolute;
+    top: -10vh;
+    left: 50%;
+    transform: translateX(-50%) rotateX(0deg) rotateY(0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;
+    color: #2A0040;
+    width: 20vh;
+    height: 20vh;
+    font-size: 10vh;
+    box-shadow: 0 0 3vh rgba(0, 0, 0, 0.3);
+    transition: all 0.7s linear 0s;
+    cursor: pointer;
+}
+
+.lifestyle:hover::before {
+    transform: translateX(-50%) rotateX(360deg) rotateY(360deg);
+}
+
+.lifestyle * {
+    padding: 0;
+    margin: 0;
+}
+
+.lifestyle p {
+    color: #ddd;
+}
+
+.lifestyle p:nth-child(1) {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+}
+
+.lifestyle p:nth-child(1) span {
+    animation: ani2 2s linear 0s infinite normal none running;
+}
+
+.lifestyle p:nth-child(1) span:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.lifestyle p:nth-child(1) span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes ani2 {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.lifestyle p:nth-child(2) {
+    font-size: 2.5vh;
+}
+
+.lifestyle div {
+    display: grid;
+    grid-template-columns: repeat(5, 1f);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2vh;
+}
+
+.lifestyle div div.container {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    width: 17vw;
+    height: 60vh;
+    cursor: pointer;
+
+}
+
+.lifestyle div div.container div.card2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear 0s;
+
+}
+
+.lifestyle div.cate {
+    margin-top: 10vh;
+}
+
+.lifestyle div div.container:hover div.card2 {
+    transform: rotateY(180deg);
+}
+
+.lifestyle div div.container div.card2 div.front2,
+.lifestyle div div.container div.card2 div.back2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, .5);
+    margin: 0;
+    padding: 0;
+    border-radius: 1vh;
+}
+
+.lifestyle div div.container div.card2 div.front2 div:nth-child(1) {
+    width: 90%;
+    height: 30vh;
+    background-image: url(../image/lifestyle/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border-radius: 0.7vh;
+}
+
+.lifestyle div div.container:nth-child(2) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/lifestyle/2.jpg)
+}
+
+.lifestyle div div.container:nth-child(3) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/lifestyle/3.jpg)
+}
+
+.lifestyle div div.container:nth-child(4) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/lifestyle/4.jpg)
+}
+
+.lifestyle div div.container:nth-child(5) div.card2 div.front2 div:nth-child(1) {
+    background-image: url(../image/lifestyle/5.jpg)
+}
+
+.lifestyle div div.container div.card2 div.front2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.lifestyle div div.container div.card2 div.front2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #ddd;
+
+}
+
+.lifestyle div div.container div.card2 div.front2 h3 {
+    font-size: 2.5vh;
+    /*    justify-self: flex-start;*/
+    margin: 0;
+    padding: 0;
+}
+
+.lifestyle div div.container div.card2 div.front2 div {
+    font-size: 2.5vh;
+    margin: 0;
+    padding: 0;
+}
+
+.lifestyle div div.container div.card2 div.back2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background-color: #ddd;
+
+}
+
+.lifestyle div div.container div.card2 div.back2 a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #2A0040;
+    background-color: #ddd;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 5vh;
+    border-radius: 1vh;
+}
+
+.lifestyle div div.container:nth-child(1) {
+    grid-column: 1/2;
+}
+
+.lifestyle div div.container:nth-child(2) {
+    grid-column: 2/3;
+}
+
+.lifestyle div div.container:nth-child(3) {
+    grid-column: 3/4;
+}
+
+.lifestyle div div.container:nth-child(4) {
+    grid-column: 4/5;
+}
+
+.lifestyle div div.container:nth-child(5) {
+    grid-column: 5/6;
+}
+
+.lifestyle a.more {
+    display: block;
+    text-decoration: none;
+    color: #2A0040;
+    background-color: #ddd;
+    padding: 3vh 7vh;
+    box-shadow: 0 0 1.5vh rgba(0, 0, 0, 0.5);
+    transition: all 0.5s linear 0s;
+    border-radius: 0.5vh;
+    font-size: 3vh;
+}
+
+.lifestyle a.more:hover {
+    border-radius: 1vh;
+    background-color: #2A0040;
+    color: #ddd;
+}
+
+/***************************************************************/
+
+@media (max-width:767px) {
+
+    .lifestyle div {
+        display: grid;
+        grid-template-columns: 1f;
+        align-items: center;
+        justify-items: center;
+        grid-gap: 2vh;
+    }
+    .lifestyle div div.container:nth-child(1),
+    .lifestyle div div.container:nth-child(2),
+    .lifestyle div div.container:nth-child(3),
+    .lifestyle div div.container:nth-child(4),
+    .lifestyle div div.container:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .lifestyle div div.container {
+        width: 50vw;
+        height: 70vh;
+    }
+    .lifestyle a.more {
+        padding: 3vh 4vh;
+        font-size: 3vh;
+    }
+    .lifestyle div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/**********/
+
+/**********/
+
+@media (max-width:435px) {
+    .lifestyle div div.container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .lifestyle p,
+    .lifestyle p span {
+        font-size: 5vh;
+    }
+    .lifestyle a.more {
+        padding: 3vh 4vh;
+        font-size: 2vh;
+    }
+    .lifestyle div div.container div.card2 div.back2 a {
+        font-size: 3vh;
+    }
+}
+
+/***************************************************************/
+
+/*End lifestyle*/
+
+/*****************************************************************/
+
+/* footer */
+
+.footer {
+    height: 25vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: #00a;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.footer div:nth-child(1) {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+    box-sizing: border-box;
+}
+
+.footer div:nth-child(1) span {
+    color: #ff0;
+    text-shadow: 0px 0px 4vh #ff0, 0px 0px 8vh #ff0, 0px 0px 12vh #ff0, 0px 0px 16vh #ff0;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
+.footer div:nth-child(1) span a {
+    display: block;
+    text-decoration: none;
+    color: #ff0;
+    text-shadow: 0px 0px 4vh #ff0, 0px 0px 8vh #ff0, 0px 0px 12vh #ff0, 0px 0px 16vh #ff0;
+    transition: all 0.5s linear 0s;
+}
+
+.footer div:nth-child(1) span:hover a {
+    font-size: 4vh;
+}
+
+.footer div:nth-child(2) {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.footer div:nth-child(2) a {
+    font-size: 5vh;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd, 0px 0px 12vh #ddd;
+    box-sizing: border-box;
+    margin: 1vh;
+    transition: all 0.5s linear 0s;
+    transform: scale(1);
+}
+
+.footer div:nth-child(2) a:last-child {
+    border: 0.5vh solid #fff;
+    border-radius: 0.8vh;
+    font-size: 3.1vh;
+    color: #fff;
+    box-shadow: 0px 0px 2vh #ddd, 0px 0px 4vh #ddd, 0px 0px 8vh #ddd inset, 0px 0px 12vh #ddd;
+}
+
+.footer div:nth-child(2) a:hover {
+    transform: scale(1.5);
+}
+
+/**********************************************************/
+
+@media (max-width:420px) {
+    .footer div:nth-child(1) {
+        font-size: 1.7vh;
+
+    }
+    .footer div:nth-child(2) a {
+        font-size: 3.5vh;
+    }
+    .footer div:nth-child(2) a:last-child {
+        font-size: 2.1vh;
+    }
+}
+
+/**********************************************************/
+
+/* End footer */
+/**********************************************************/
+.toTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
+    background-color: #262626;
+    color: #fff;
+    width: 5vh;
+    height: 5vh;
+    padding: 1vh;
+    font-size: 3vh;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+
+
+}
+
+.fade2 {
+    animation: show 4s linear 0s 1 normal forwards running;
+
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/**********************************************************/
+.container .card2 .front2 h3{
+    text-transform: capitalize;
+}
+/**********************************************************/
+
+
+
+/**********************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
